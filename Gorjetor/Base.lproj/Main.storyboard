@@ -1,24 +1,252 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.14" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--GorjetorVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="GorjetorVC" customModule="Gorjetor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="abf-AH-7Dy">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="105"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GORJETOR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wga-zZ-ewU">
+                                        <rect key="frame" x="24" y="20" width="129" height="85"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
+                                        <color key="textColor" name="tcCharcoal"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Zhq-KF-RLb">
+                                        <rect key="frame" x="302" y="47" width="51" height="31"/>
+                                        <color key="onTintColor" name="tcSeafoamGreen"/>
+                                        <connections>
+                                            <action selector="themeToggled:" destination="BYZ-38-t0r" eventType="valueChanged" id="we5-dp-HQr"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Zhq-KF-RLb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wga-zZ-ewU" secondAttribute="trailing" constant="149" id="JDq-jc-U30"/>
+                                    <constraint firstItem="Zhq-KF-RLb" firstAttribute="centerY" secondItem="wga-zZ-ewU" secondAttribute="centerY" id="K7o-jp-zeO"/>
+                                    <constraint firstAttribute="bottom" secondItem="wga-zZ-ewU" secondAttribute="bottom" id="Qz1-Ii-P7J"/>
+                                    <constraint firstAttribute="trailing" secondItem="Zhq-KF-RLb" secondAttribute="trailing" constant="24" id="Zhe-2q-Dz0"/>
+                                    <constraint firstItem="wga-zZ-ewU" firstAttribute="leading" secondItem="abf-AH-7Dy" secondAttribute="leading" constant="24" id="iRQ-e6-QyM"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5yT-L1-fKS">
+                                <rect key="frame" x="16" y="129" width="343" height="203"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="e2Q-Ub-9xi" userLabel="Input Stack View">
+                                        <rect key="frame" x="22" y="55" width="299" height="93"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nlV-Or-VOj" userLabel="BillAmount Stack View">
+                                                <rect key="frame" x="0.0" y="0.0" width="299" height="30"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bill Amount" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Cj-Kz-Gbn">
+                                                        <rect key="frame" x="0.0" y="0.0" width="181" height="30"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                                        <color key="textColor" name="tcWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$0.00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d2m-Av-hae" customClass="BillAmountTextField" customModule="Gorjetor" customModuleProvider="target">
+                                                        <rect key="frame" x="181" y="0.0" width="118" height="30"/>
+                                                        <color key="tintColor" name="tcHotPink"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="118" id="xbF-mt-DSf"/>
+                                                        </constraints>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="decimalPad" keyboardAppearance="light"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZRT-MQ-Th7" userLabel="TipPercent Stack View">
+                                                <rect key="frame" x="0.0" y="65" width="299" height="28"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip %" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0c-HY-IFA">
+                                                        <rect key="frame" x="0.0" y="0.0" width="126" height="28"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                                        <color key="textColor" name="tcWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="nvR-Md-JBO">
+                                                        <rect key="frame" x="126" y="0.0" width="173" height="29"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="173" id="o7P-XP-Z7Q"/>
+                                                        </constraints>
+                                                        <segments>
+                                                            <segment title="15%"/>
+                                                            <segment title="18%"/>
+                                                            <segment title="20%"/>
+                                                        </segments>
+                                                        <color key="tintColor" name="tcHotPink"/>
+                                                        <connections>
+                                                            <action selector="tipPercentChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="qtZ-8m-5R6"/>
+                                                        </connections>
+                                                    </segmentedControl>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="nlV-Or-VOj" firstAttribute="width" secondItem="e2Q-Ub-9xi" secondAttribute="width" id="GHN-o5-ZaF"/>
+                                            <constraint firstItem="ZRT-MQ-Th7" firstAttribute="width" secondItem="e2Q-Ub-9xi" secondAttribute="width" id="jbs-k6-Tt0"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="tcDarkBlue"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="e2Q-Ub-9xi" secondAttribute="trailing" constant="22" id="200-uc-SNz"/>
+                                    <constraint firstItem="e2Q-Ub-9xi" firstAttribute="leading" secondItem="5yT-L1-fKS" secondAttribute="leading" constant="22" id="V6e-gE-yBv"/>
+                                    <constraint firstItem="e2Q-Ub-9xi" firstAttribute="centerY" secondItem="5yT-L1-fKS" secondAttribute="centerY" id="jTr-MY-gyt"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EOn-LH-uSR">
+                                <rect key="frame" x="16" y="356" width="343" height="203"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="Ij1-lT-grO" userLabel="Output Stack View">
+                                        <rect key="frame" x="22" y="56.5" width="299" height="90"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hxb-pf-YFw" userLabel="TipAmount Stack View">
+                                                <rect key="frame" x="0.0" y="0.0" width="299" height="27.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip Amount" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nUw-Bs-DSn">
+                                                        <rect key="frame" x="0.0" y="0.0" width="110" height="27.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="110" id="GVV-58-RSW"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                                        <color key="textColor" name="tcCharcoal"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wjA-9O-lgV">
+                                                        <rect key="frame" x="110" y="0.0" width="189" height="27.5"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                                        <color key="textColor" name="tcBlack"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Kun-j9-hZU" userLabel="Total Stack View">
+                                                <rect key="frame" x="0.0" y="62.5" width="299" height="27.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfZ-PU-mxn">
+                                                        <rect key="frame" x="0.0" y="0.0" width="110" height="27.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="110" id="huK-WF-Wbr"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                                        <color key="textColor" name="tcCharcoal"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9OX-ga-DSf">
+                                                        <rect key="frame" x="118" y="0.0" width="181" height="27.5"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                                        <color key="textColor" name="tcBlack"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Hxb-pf-YFw" firstAttribute="width" secondItem="Ij1-lT-grO" secondAttribute="width" id="Obe-f1-Wvf"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Ij1-lT-grO" secondAttribute="trailing" constant="22" id="Vxj-HX-aaH"/>
+                                    <constraint firstItem="Ij1-lT-grO" firstAttribute="leading" secondItem="EOn-LH-uSR" secondAttribute="leading" constant="22" id="rOc-yH-LeU"/>
+                                    <constraint firstItem="Ij1-lT-grO" firstAttribute="centerY" secondItem="EOn-LH-uSR" secondAttribute="centerY" id="utG-zD-d5f"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cEC-Ul-7KI">
+                                <rect key="frame" x="16" y="583" width="343" height="60"/>
+                                <color key="backgroundColor" name="tcDarkBlue"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="I1T-fZ-Bdh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="RESET">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h7e-Tl-NMb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="tcOffWhite"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="wga-zZ-ewU" secondAttribute="top" id="4Gc-uq-LxW"/>
+                            <constraint firstItem="abf-AH-7Dy" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="5wL-AH-PrV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5yT-L1-fKS" secondAttribute="trailing" constant="16" id="7Dp-y0-yTK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cEC-Ul-7KI" secondAttribute="trailing" constant="16" id="8O2-MM-cw4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="abf-AH-7Dy" secondAttribute="bottom" constant="-85" id="E62-Gf-wNi"/>
+                            <constraint firstItem="EOn-LH-uSR" firstAttribute="height" secondItem="5yT-L1-fKS" secondAttribute="height" id="ER3-ci-Oqu"/>
+                            <constraint firstItem="abf-AH-7Dy" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="EwH-JT-SMj"/>
+                            <constraint firstItem="cEC-Ul-7KI" firstAttribute="top" secondItem="EOn-LH-uSR" secondAttribute="bottom" constant="24" id="IDa-4H-vBg"/>
+                            <constraint firstItem="cEC-Ul-7KI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="OcA-40-tSm"/>
+                            <constraint firstItem="abf-AH-7Dy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Oxn-tm-xjd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cEC-Ul-7KI" secondAttribute="bottom" constant="24" id="aVm-dH-ndH"/>
+                            <constraint firstItem="5yT-L1-fKS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="eZG-ix-7P2"/>
+                            <constraint firstItem="EOn-LH-uSR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="eoe-gx-snu"/>
+                            <constraint firstItem="EOn-LH-uSR" firstAttribute="top" secondItem="5yT-L1-fKS" secondAttribute="bottom" constant="24" id="gcA-Z8-oj1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EOn-LH-uSR" secondAttribute="trailing" constant="16" id="o8f-rS-E3j"/>
+                            <constraint firstItem="5yT-L1-fKS" firstAttribute="top" secondItem="abf-AH-7Dy" secondAttribute="bottom" constant="24" id="sbf-A7-nMY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="billAmountTextField" destination="d2m-Av-hae" id="rAd-Bs-evS"/>
+                        <outlet property="headerView" destination="abf-AH-7Dy" id="4m3-Fg-Tp9"/>
+                        <outlet property="inputCardView" destination="5yT-L1-fKS" id="Doj-lk-F6p"/>
+                        <outlet property="outputCardView" destination="EOn-LH-uSR" id="eek-Sq-tda"/>
+                        <outlet property="resetButton" destination="cEC-Ul-7KI" id="bod-Wj-1d0"/>
+                        <outlet property="themeSwitch" destination="Zhq-KF-RLb" id="n9p-3b-HNy"/>
+                        <outlet property="tipAmountLabel" destination="wjA-9O-lgV" id="COe-ga-NJ7"/>
+                        <outlet property="tipAmountTitleLabel" destination="nUw-Bs-DSn" id="XmF-Xb-kRP"/>
+                        <outlet property="tipPercentSegmentedControl" destination="nvR-Md-JBO" id="pYI-fr-81U"/>
+                        <outlet property="titleLabel" destination="wga-zZ-ewU" id="27P-fc-v5u"/>
+                        <outlet property="totalAmountLabel" destination="9OX-ga-DSf" id="sBY-Z1-V33"/>
+                        <outlet property="totalAmountTitleLabel" destination="vfZ-PU-mxn" id="fa9-UN-5fK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="116.49175412293854"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="tcBlack">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="tcCharcoal">
+            <color red="0.28999999165534973" green="0.28999999165534973" blue="0.28999999165534973" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="tcDarkBlue">
+            <color red="0.16899999976158142" green="0.17599999904632568" blue="0.36100000143051147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="tcHotPink">
+            <color red="0.98000001907348633" green="0.32499998807907104" blue="0.5220000147819519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="tcOffWhite">
+            <color red="0.96899998188018799" green="0.96899998188018799" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="tcSeafoamGreen">
+            <color red="0.34900000691413879" green="0.85500001907348633" blue="0.64300000667572021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="tcWhite">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

@@ -7,21 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9475FDE520EAEA2E00A28843 /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9475FDE420EAEA2E00A28843 /* ColorTheme.swift */; };
 		94CDFCBE20DBF44600463A3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CDFCBD20DBF44600463A3F /* AppDelegate.swift */; };
-		94CDFCC020DBF44600463A3F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CDFCBF20DBF44600463A3F /* ViewController.swift */; };
+		94CDFCC020DBF44600463A3F /* GorjetorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CDFCBF20DBF44600463A3F /* GorjetorVC.swift */; };
 		94CDFCC320DBF44600463A3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94CDFCC120DBF44600463A3F /* Main.storyboard */; };
 		94CDFCC520DBF44A00463A3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94CDFCC420DBF44A00463A3F /* Assets.xcassets */; };
 		94CDFCC820DBF44A00463A3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94CDFCC620DBF44A00463A3F /* LaunchScreen.storyboard */; };
+		94CDFCD220DD898400463A3F /* BillAmountTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CDFCD120DD898300463A3F /* BillAmountTextField.swift */; };
+		94CDFCD420DD89E700463A3F /* UIColor+TC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CDFCD320DD89E600463A3F /* UIColor+TC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9475FDE420EAEA2E00A28843 /* ColorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTheme.swift; sourceTree = "<group>"; };
 		94CDFCBA20DBF44600463A3F /* Gorjetor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gorjetor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94CDFCBD20DBF44600463A3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		94CDFCBF20DBF44600463A3F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		94CDFCBF20DBF44600463A3F /* GorjetorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GorjetorVC.swift; sourceTree = "<group>"; };
 		94CDFCC220DBF44600463A3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		94CDFCC420DBF44A00463A3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94CDFCC720DBF44A00463A3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		94CDFCC920DBF44A00463A3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94CDFCD120DD898300463A3F /* BillAmountTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillAmountTextField.swift; sourceTree = "<group>"; };
+		94CDFCD320DD89E600463A3F /* UIColor+TC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+TC.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,25 @@
 		94CDFCBC20DBF44600463A3F /* Gorjetor */ = {
 			isa = PBXGroup;
 			children = (
+				94CDFCD620DD8A0B00463A3F /* Supporting */,
+				94CDFCC620DBF44A00463A3F /* LaunchScreen.storyboard */,
 				94CDFCBD20DBF44600463A3F /* AppDelegate.swift */,
-				94CDFCBF20DBF44600463A3F /* ViewController.swift */,
+				94CDFCBF20DBF44600463A3F /* GorjetorVC.swift */,
+				9475FDE420EAEA2E00A28843 /* ColorTheme.swift */,
 				94CDFCC120DBF44600463A3F /* Main.storyboard */,
 				94CDFCC420DBF44A00463A3F /* Assets.xcassets */,
-				94CDFCC620DBF44A00463A3F /* LaunchScreen.storyboard */,
 				94CDFCC920DBF44A00463A3F /* Info.plist */,
 			);
 			path = Gorjetor;
+			sourceTree = "<group>";
+		};
+		94CDFCD620DD8A0B00463A3F /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				94CDFCD320DD89E600463A3F /* UIColor+TC.swift */,
+				94CDFCD120DD898300463A3F /* BillAmountTextField.swift */,
+			);
+			name = Supporting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +152,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94CDFCC020DBF44600463A3F /* ViewController.swift in Sources */,
+				94CDFCC020DBF44600463A3F /* GorjetorVC.swift in Sources */,
+				9475FDE520EAEA2E00A28843 /* ColorTheme.swift in Sources */,
+				94CDFCD220DD898400463A3F /* BillAmountTextField.swift in Sources */,
+				94CDFCD420DD89E700463A3F /* UIColor+TC.swift in Sources */,
 				94CDFCBE20DBF44600463A3F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  Gorjetor
-//
-//  Created by Andre Racco on 6/21/18.
-//  Copyright © 2018 Andre Racco. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
